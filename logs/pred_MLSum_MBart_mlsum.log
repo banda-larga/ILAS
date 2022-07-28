@@ -1,0 +1,18 @@
+Currently using GPU
+data reading...
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4000 entries, 0 to 3999
+Data columns (total 2 columns):
+ #   Column  Non-Null Count  Dtype 
+---  ------  --------------  ----- 
+ 0   source  4000 non-null   object
+ 1   target  4000 non-null   object
+dtypes: object(2)
+memory usage: 62.6+ KB
+loading summarizer...
+rouge1 19.76044732499998
+rouge2 6.636260350000001
+rougeL 16.83300420000002
+rougeLsum 16.83300420000002
+gen_len 34.073
+19.76044732499998|6.636260350000001|16.83300420000002|16.83300420000002|34.073

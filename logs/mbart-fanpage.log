@@ -1,0 +1,299 @@
+nohup: ignoring input
+12/20/2021 09:47:51 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+12/20/2021 09:47:51 - INFO - __main__ - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+bf16=False,
+bf16_full_eval=False,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_steps=None,
+evaluation_strategy=IntervalStrategy.NO,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=/home/super/Models/summarization_mbartDef/runs/Dec20_09-47-51_dista-lambda,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=2.0,
+output_dir=/home/super/Models/summarization_mbartDef,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=1,
+per_device_train_batch_size=1,
+predict_with_generate=True,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+resume_from_checkpoint=None,
+run_name=/home/super/Models/summarization_mbartDef,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.STEPS,
+save_total_limit=None,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+sortish_sampler=False,
+tf32=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+12/20/2021 09:47:51 - WARNING - datasets.builder - Using custom data configuration default-bc90494737cc1e16
+12/20/2021 09:47:51 - INFO - datasets.builder - Overwrite dataset info from restored data version.
+12/20/2021 09:47:51 - INFO - datasets.info - Loading Dataset info from /home/super/.cache/huggingface/datasets/csv/default-bc90494737cc1e16/0.0.0/bf68a4c4aefa545d0712b2fcbb1b327f905bbe2f6425fbc5e8c25234acb9e14a
+12/20/2021 09:47:51 - WARNING - datasets.builder - Reusing dataset csv (/home/super/.cache/huggingface/datasets/csv/default-bc90494737cc1e16/0.0.0/bf68a4c4aefa545d0712b2fcbb1b327f905bbe2f6425fbc5e8c25234acb9e14a)
+12/20/2021 09:47:51 - INFO - datasets.info - Loading Dataset info from /home/super/.cache/huggingface/datasets/csv/default-bc90494737cc1e16/0.0.0/bf68a4c4aefa545d0712b2fcbb1b327f905bbe2f6425fbc5e8c25234acb9e14a
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 1047.27it/s]
+[INFO|configuration_utils.py:604] 2021-12-20 09:47:52,801 >> loading configuration file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json from cache at /home/super/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+[INFO|configuration_utils.py:641] 2021-12-20 09:47:52,802 >> Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.15.0.dev0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+[INFO|tokenization_auto.py:353] 2021-12-20 09:47:53,240 >> Could not locate the tokenizer configuration file, will try to use the model config instead.
+[INFO|configuration_utils.py:604] 2021-12-20 09:47:54,097 >> loading configuration file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json from cache at /home/super/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+[INFO|configuration_utils.py:641] 2021-12-20 09:47:54,099 >> Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.15.0.dev0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+[INFO|tokenization_utils_base.py:1742] 2021-12-20 09:47:56,677 >> loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/sentencepiece.bpe.model from cache at /home/super/.cache/huggingface/transformers/83d419fb34e90155a8d95f7799f7a7316a327dc28c7ee6bee15b5a62d3c5ca6b.00628a9eeb8baf4080d44a0abe9fe8057893de20c7cb6e6423cddbf452f7d4d8
+[INFO|tokenization_utils_base.py:1742] 2021-12-20 09:47:56,677 >> loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/tokenizer.json from cache at /home/super/.cache/huggingface/transformers/16e85cac0e7a8c2938ac468199d0adff7483341305c7e848063b72dcf5f22538.39607a8bede9bcd2666ea442230a9d382f57e4fea127c9cc5b6fc6caf527d682
+[INFO|tokenization_utils_base.py:1742] 2021-12-20 09:47:56,677 >> loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:1742] 2021-12-20 09:47:56,677 >> loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:1742] 2021-12-20 09:47:56,677 >> loading file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/tokenizer_config.json from cache at None
+[INFO|configuration_utils.py:604] 2021-12-20 09:47:57,509 >> loading configuration file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/config.json from cache at /home/super/.cache/huggingface/transformers/36135304685d914515720daa48fc1adae57803e32ab82d5bde85ef78479e9765.b548f7e307531070391a881374674824b374f829e5d8f68857012de63fe2681a
+[INFO|configuration_utils.py:641] 2021-12-20 09:47:57,510 >> Model config MBartConfig {
+  "_name_or_path": "facebook/mbart-large-cc25",
+  "_num_labels": 3,
+  "activation_dropout": 0.0,
+  "activation_function": "gelu",
+  "add_bias_logits": false,
+  "add_final_layer_norm": true,
+  "architectures": [
+    "MBartForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 0,
+  "classif_dropout": 0.0,
+  "classifier_dropout": 0.0,
+  "d_model": 1024,
+  "decoder_attention_heads": 16,
+  "decoder_ffn_dim": 4096,
+  "decoder_layerdrop": 0.0,
+  "decoder_layers": 12,
+  "dropout": 0.1,
+  "encoder_attention_heads": 16,
+  "encoder_ffn_dim": 4096,
+  "encoder_layerdrop": 0.0,
+  "encoder_layers": 12,
+  "eos_token_id": 2,
+  "forced_eos_token_id": 2,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2"
+  },
+  "init_std": 0.02,
+  "is_encoder_decoder": true,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2
+  },
+  "max_length": 1024,
+  "max_position_embeddings": 1024,
+  "model_type": "mbart",
+  "normalize_before": true,
+  "normalize_embedding": true,
+  "num_beams": 5,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "scale_embedding": true,
+  "static_position_embeddings": false,
+  "task_specific_params": {
+    "translation_en_to_ro": {
+      "decoder_start_token_id": 250020
+    }
+  },
+  "transformers_version": "4.15.0.dev0",
+  "use_cache": true,
+  "vocab_size": 250027
+}
+
+[INFO|tokenization_utils_base.py:888] 2021-12-20 09:47:58,040 >> Assigning ['ar_AR', 'cs_CZ', 'de_DE', 'en_XX', 'es_XX', 'et_EE', 'fi_FI', 'fr_XX', 'gu_IN', 'hi_IN', 'it_IT', 'ja_XX', 'kk_KZ', 'ko_KR', 'lt_LT', 'lv_LV', 'my_MM', 'ne_NP', 'nl_XX', 'ro_RO', 'ru_RU', 'si_LK', 'tr_TR', 'vi_VN', 'zh_CN'] to the additional_special_tokens key of the tokenizer
+[INFO|modeling_utils.py:1352] 2021-12-20 09:47:58,460 >> loading weights file https://huggingface.co/facebook/mbart-large-cc25/resolve/main/pytorch_model.bin from cache at /home/super/.cache/huggingface/transformers/58963b41815ac5618d9910411e018d60a3ae7d4540a66e6cf70adf29a748ca1b.bef0d2e3352d6c4bf1213c6207738ec5ecf458de355c65b2aead6671bc612138
+[INFO|modeling_utils.py:1619] 2021-12-20 09:48:04,219 >> All model checkpoint weights were used when initializing MBartForConditionalGeneration.
+
+[INFO|modeling_utils.py:1627] 2021-12-20 09:48:04,219 >> All the weights of MBartForConditionalGeneration were initialized from the model checkpoint at facebook/mbart-large-cc25.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use MBartForConditionalGeneration for predictions without further training.
+12/20/2021 09:48:04 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/super/.cache/huggingface/datasets/csv/default-bc90494737cc1e16/0.0.0/bf68a4c4aefa545d0712b2fcbb1b327f905bbe2f6425fbc5e8c25234acb9e14a/cache-10cdf29928fd81b2.arrow
+12/20/2021 09:48:04 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/super/.cache/huggingface/datasets/csv/default-bc90494737cc1e16/0.0.0/bf68a4c4aefa545d0712b2fcbb1b327f905bbe2f6425fbc5e8c25234acb9e14a/cache-2fb40bd1a213152c.arrow
+[INFO|trainer.py:1204] 2021-12-20 09:48:08,277 >> ***** Running training *****
+[INFO|trainer.py:1205] 2021-12-20 09:48:08,277 >>   Num examples = 67492
+[INFO|trainer.py:1206] 2021-12-20 09:48:08,277 >>   Num Epochs = 2
+[INFO|trainer.py:1207] 2021-12-20 09:48:08,277 >>   Instantaneous batch size per device = 1
+[INFO|trainer.py:1208] 2021-12-20 09:48:08,277 >>   Total train batch size (w. parallel, distributed & accumulation) = 1
+[INFO|trainer.py:1209] 2021-12-20 09:48:08,277 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:1210] 2021-12-20 09:48:08,277 >>   Total optimization steps = 134984
+  0%|          | 0/134984 [00:00<?, ?it/s]  0%|          | 1/134984 [00:00<11:35:35,  3.23it/s]  0%|          | 2/134984 [00:00<12:35:57,  2.98it/s]  0%|          | 3/134984 [00:00<11:49:21,  3.17it/s]  0%|          | 4/134984 [00:01<11:52:44,  3.16it/s]  0%|          | 5/134984 [00:01<11:14:06,  3.34it/s]  0%|          | 6/134984 [00:02<13:41:13,  2.74it/s]  0%|          | 7/134984 [00:02<13:53:35,  2.70it/s]  0%|          | 8/134984 [00:02<14:46:08,  2.54it/s]  0%|          | 9/134984 [00:03<13:49:15,  2.71it/s]  0%|          | 10/134984 [00:03<12:41:07,  2.96it/s]  0%|          | 11/134984 [00:03<12:10:01,  3.08it/s]  0%|          | 12/134984 [00:04<11:42:06,  3.20it/s]  0%|          | 13/134984 [00:04<11:43:35,  3.20it/s]  0%|          | 14/134984 [00:04<11:34:13,  3.24it/s]  0%|          | 15/134984 [00:05<13:58:20,  2.68it/s]  0%|          | 16/134984 [00:05<15:06:51,  2.48it/s]  0%|          | 17/134984 [00:05<14:05:54,  2.66it/s]  0%|          | 18/134984 [00:06<13:52:02,  2.70it/s]  0%|          | 19/134984 [00:06<15:35:23,  2.40it/s]  0%|          | 20/134984 [00:07<15:01:21,  2.50it/s]  0%|          | 21/134984 [00:07<16:01:00,  2.34it/s]  0%|          | 22/134984 [00:08<15:13:42,  2.46it/s]  0%|          | 23/134984 [00:08<13:50:09,  2.71it/s]  0%|          | 24/134984 [00:08<12:49:26,  2.92it/s]  0%|          | 25/134984 [00:08<12:29:46,  3.00it/s]  0%|          | 26/134984 [00:09<11:58:31,  3.13it/s]  0%|          | 27/134984 [00:09<11:37:35,  3.22it/s]  0%|          | 28/134984 [00:09<11:24:28,  3.29it/s]  0%|          | 29/134984 [00:10<12:17:12,  3.05it/s]  0%|          | 30/134984 [00:10<12:08:07,  3.09it/s]  0%|          | 31/134984 [00:10<11:17:35,  3.32it/s]  0%|          | 32/134984 [00:11<12:25:42,  3.02it/s]  0%|          | 33/134984 [00:11<12:26:17,  3.01it/s]  0%|          | 34/134984 [00:11<14:01:35,  2.67it/s]  0%|          | 35/134984 [00:12<13:21:11,  2.81it/s]  0%|          | 36/134984 [00:12<13:18:36,  2.82it/s]  0%|          | 37/134984 [00:12<13:17:57,  2.82it/s]  0%|          | 38/134984 [00:13<12:20:34,  3.04it/s]  0%|          | 39/134984 [00:13<12:00:12,  3.12it/s]  0%|          | 40/134984 [00:14<14:01:34,  2.67it/s]  0%|          | 41/134984 [00:14<13:40:52,  2.74it/s]  0%|          | 42/134984 [00:14<12:44:59,  2.94it/s]  0%|          | 43/134984 [00:14<12:06:45,  3.09it/s]  0%|          | 44/134984 [00:15<11:41:30,  3.21it/s]  0%|          | 45/134984 [00:15<11:22:29,  3.30it/s]  0%|          | 46/134984 [00:15<11:27:54,  3.27it/s]  0%|          | 47/134984 [00:16<11:18:42,  3.31it/s]  0%|          | 48/134984 [00:16<11:12:28,  3.34it/s]  0%|          | 49/134984 [00:16<11:15:27,  3.33it/s]  0%|          | 50/134984 [00:17<11:53:17,  3.15it/s]  0%|          | 51/134984 [00:17<11:17:36,  3.32it/s]  0%|          | 52/134984 [00:17<11:05:42,  3.38it/s]  0%|          | 53/134984 [00:17<11:07:34,  3.37it/s]  0%|          | 54/134984 [00:18<11:14:32,  3.33it/s]  0%|          | 55/134984 [00:18<11:12:20,  3.34it/s]  0%|          | 56/134984 [00:19<14:01:54,  2.67it/s]  0%|          | 57/134984 [00:19<13:55:53,  2.69it/s]  0%|          | 58/134984 [00:19<13:17:28,  2.82it/s]  0%|          | 59/134984 [00:20<13:15:34,  2.83it/s]  0%|          | 60/134984 [00:20<12:08:52,  3.09it/s]  0%|          | 61/134984 [00:20<12:23:01,  3.03it/s]  0%|          | 62/134984 [00:21<12:24:40,  3.02it/s]  0%|          | 63/134984 [00:21<12:06:19,  3.10it/s]  0%|          | 64/134984 [00:21<11:48:26,  3.17it/s]  0%|          | 65/134984 [00:21<12:04:07,  3.11it/s]  0%|          | 66/134984 [00:22<11:37:27,  3.22it/s]  0%|          | 67/134984 [00:22<11:44:44,  3.19it/s]  0%|          | 68/134984 [00:23<14:14:27,  2.63it/s]  0%|          | 69/134984 [00:23<13:17:51,  2.82it/s]  0%|          | 70/134984 [00:23<12:19:07,  3.04it/s]  0%|          | 71/134984 [00:24<12:57:21,  2.89it/s]  0%|          | 72/134984 [00:24<12:17:29,  3.05it/s]  0%|          | 73/134984 [00:24<12:24:55,  3.02it/s]  0%|          | 74/134984 [00:25<12:39:52,  2.96it/s]  0%|          | 75/134984 [00:25<12:22:57,  3.03it/s]  0%|          | 76/134984 [00:25<12:13:28,  3.07it/s]  0%|          | 77/134984 [00:25<12:08:27,  3.09it/s]  0%|          | 78/134984 [00:26<11:44:22,  3.19it/s]  0%|          | 79/134984 [00:26<11:55:46,  3.14it/s]  0%|          | 80/134984 [00:26<11:42:46,  3.20it/s]  0%|          | 81/134984 [00:27<11:23:09,  3.29it/s]  0%|          | 82/134984 [00:27<11:10:52,  3.35it/s]  0%|          | 83/134984 [00:27<11:44:54,  3.19it/s]  0%|          | 84/134984 [00:28<11:20:43,  3.30it/s]  0%|          | 85/134984 [00:28<11:08:59,  3.36it/s]  0%|          | 86/134984 [00:28<11:32:36,  3.25it/s]  0%|          | 87/134984 [00:28<11:13:06,  3.34it/s]  0%|          | 88/134984 [00:29<11:14:43,  3.33it/s]  0%|          | 89/134984 [00:29<11:49:20,  3.17it/s]  0%|          | 90/134984 [00:29<11:19:43,  3.31it/s]  0%|          | 91/134984 [00:30<11:15:06,  3.33it/s]  0%|          | 92/134984 [00:30<11:41:17,  3.21it/s]  0%|          | 93/134984 [00:30<12:43:42,  2.94it/s]  0%|          | 94/134984 [00:31<12:47:21,  2.93it/s]  0%|          | 95/134984 [00:31<13:29:50,  2.78it/s]  0%|          | 96/134984 [00:31<12:40:01,  2.96it/s]  0%|          | 97/134984 [00:32<12:24:02,  3.02it/s]  0%|          | 98/134984 [00:32<11:52:34,  3.15it/s]  0%|          | 99/134984 [00:32<11:16:58,  3.32it/s]  0%|          | 100/134984 [00:33<13:46:11,  2.72it/s]  0%|          | 101/134984 [00:33<12:56:02,  2.90it/s]  0%|          | 102/134984 [00:34<14:27:57,  2.59it/s]  0%|          | 103/134984 [00:34<13:46:45,  2.72it/s]  0%|          | 104/134984 [00:34<12:59:26,  2.88it/s]  0%|          | 105/134984 [00:35<13:13:34,  2.83it/s]  0%|          | 106/134984 [00:35<14:43:05,  2.55it/s]  0%|          | 107/134984 [00:35<14:18:23,  2.62it/s]  0%|          | 108/134984 [00:36<13:16:57,  2.82it/s]  0%|          | 109/134984 [00:36<13:22:30,  2.80it/s]  0%|          | 110/134984 [00:36<13:31:50,  2.77it/s]  0%|          | 111/134984 [00:37<13:10:32,  2.84it/s]  0%|          | 112/134984 [00:37<13:02:07,  2.87it/s]  0%|          | 113/134984 [00:37<12:42:38,  2.95it/s]  0%|          | 114/134984 [00:38<12:03:34,  3.11it/s]  0%|          | 115/134984 [00:38<11:38:34,  3.22it/s]  0%|          | 116/134984 [00:38<11:16:25,  3.32it/s]  0%|          | 117/134984 [00:39<11:38:24,  3.22it/s]  0%|          | 118/134984 [00:39<13:40:05,  2.74it/s]  0%|          | 119/134984 [00:39<12:57:31,  2.89it/s]  0%|          | 120/134984 [00:40<12:13:06,  3.07it/s]  0%|          | 121/134984 [00:40<12:33:55,  2.98it/s]  0%|          | 122/134984 [00:40<12:39:20,  2.96it/s]  0%|          | 123/134984 [00:41<12:02:21,  3.11it/s]  0%|          | 124/134984 [00:41<12:10:07,  3.08it/s]  0%|          | 125/134984 [00:42<14:00:34,  2.67it/s]  0%|          | 126/134984 [00:42<15:16:26,  2.45it/s]  0%|          | 127/134984 [00:42<14:04:52,  2.66it/s]  0%|          | 128/134984 [00:43<17:02:15,  2.20it/s]  0%|          | 129/134984 [00:43<15:19:40,  2.44it/s]  0%|          | 130/134984 [00:44<14:34:56,  2.57it/s]  0%|          | 131/134984 [00:44<15:00:46,  2.50it/s]  0%|          | 132/134984 [00:44<14:22:03,  2.61it/s]  0%|          | 133/134984 [00:45<13:28:28,  2.78it/s]  0%|          | 134/134984 [00:45<16:13:39,  2.31it/s]  0%|          | 135/134984 [00:46<14:55:15,  2.51it/s]  0%|          | 136/134984 [00:46<14:15:36,  2.63it/s]  0%|          | 137/134984 [00:47<16:11:09,  2.31it/s]  0%|          | 138/134984 [00:47<14:31:39,  2.58it/s]  0%|          | 139/134984 [00:47<13:09:20,  2.85it/s]  0%|          | 140/134984 [00:47<13:25:11,  2.79it/s]  0%|          | 141/134984 [00:48<12:21:06,  3.03it/s]  0%|          | 142/134984 [00:48<12:29:36,  3.00it/s]  0%|          | 143/134984 [00:48<12:17:20,  3.05it/s]  0%|          | 144/134984 [00:49<12:37:48,  2.97it/s]  0%|          | 145/134984 [00:49<12:32:55,  2.98it/s]  0%|          | 146/134984 [00:49<13:37:13,  2.75it/s]  0%|          | 147/134984 [00:50<12:30:00,  3.00it/s]  0%|          | 148/134984 [00:50<13:45:04,  2.72it/s]  0%|          | 149/134984 [00:51<13:24:55,  2.79it/s]  0%|          | 150/134984 [00:51<12:38:00,  2.96it/s]  0%|          | 151/134984 [00:51<13:28:29,  2.78it/s]  0%|          | 152/134984 [00:51<12:36:24,  2.97it/s]  0%|          | 153/134984 [00:52<12:52:29,  2.91it/s]  0%|          | 154/134984 [00:52<14:12:58,  2.63it/s]  0%|          | 155/134984 [00:53<13:41:52,  2.73it/s]  0%|          | 156/134984 [00:53<12:55:05,  2.90it/s]

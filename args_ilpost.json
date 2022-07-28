@@ -1,0 +1,23 @@
+
+{
+"model_name_or_path": "facebook/mbart-large-cc25",
+"tokenizer_name": "facebook/mbart-large-cc25" ,
+"do_train":true,
+"do_eval":true,
+"do_predict": true,
+"train_file": "./Data/IlPost/train.csv",
+"validation_file": "./Data/IlPost/val.csv",
+"test_file": "./Data/IlPost/test.csv",
+"source_lang": "it_IT",
+"target_lang": "it_IT",
+"output_dir": "/home/super/Models/summarization_mbart_ilpost",
+"num_train_epochs":4.0,
+"overwrite_output_dir": true,
+"per_device_train_batch_size":1,
+"per_device_eval_batch_size":1,
+"predict_with_generate": true,
+"max_seq_length":128,
+"save_total_limit": 2
+}
+
+

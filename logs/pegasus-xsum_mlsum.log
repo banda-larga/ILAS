@@ -1,0 +1,23 @@
+/media/mint/Barracuda/Project/summarization/venv/bin/python /media/mint/Barracuda/Project/summarization/src/metrics_huggingface_eng_model.py
+Currently using GPU
+data reading...
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4000 entries, 0 to 3999
+Data columns (total 2 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   source  4000 non-null   object
+ 1   target  4000 non-null   object
+dtypes: object(2)
+memory usage: 62.6+ KB
+loading it->en model...
+loading en->it model...
+loading summarizer...
+100%|██████████| 800/800 [1:37:48<00:00,  7.34s/it]
+rouge1 15.169904749999992
+rouge2 3.565353624999996
+rougeL 12.453095375000009
+rougeLsum 12.438805875000009
+gen_len 35.02675
+
+Process finished with exit code 0
