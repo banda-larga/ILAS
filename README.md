@@ -53,9 +53,9 @@ This repo contains the code for the experiments on training T5 and MBart models 
 
 
 
-## Create dataset script
+## Datasets and models
 
-TODO add a gude to create dataset..
+Datasets and models are available on Huggingface on [ARTeLab](https://huggingface.co/ARTeLab).
 
 ## Eval Pegasus with translations
 We used [google/pegasus-cnn_dailymail](https://huggingface.co/google/pegasus-cnn_dailymail) and [google/pegasus-xsum](https://huggingface.co/google/pegasus-xsum) as existing comparisons by translating the input to english with [Helsinki-NLP/opus-mt-it-en](https://huggingface.co/Helsinki-NLP/opus-mt-it-en) and the output to intalian with [Helsinki-NLP/opus-mt-en-it](https://huggingface.co/Helsinki-NLP/opus-mt-en-it).
